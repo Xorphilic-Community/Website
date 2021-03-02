@@ -121,107 +121,7 @@ img{
 .btn-1:after{
 	border-radius: 30px;
 }
-.effect-wrap .effect{
-	position: absolute;
-	z-index: -1;
-}
-.effect-1{
-	width: 32px;
-	height: 32px;
-	border: 4px solid #8a49ff;
-	right: 10%;
-	bottom: 10%;
-	animation: spin 10s linear infinite
-}
-.effect-2{
-	left: 3%;
-	bottom: 20%;
-	width: 40px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	animation: topBounce 3s ease-in-out infinite
-}
-.effect-2 div{
-	height: 3px;
-	width: 3px;
-	background-color: #ff9c07;
-	margin: 0 3px 8px;
-}
-.effect-3{
-	height: 180px;
-	width: 180px;
-	border:25px solid var(--skin-color);
-	border-radius: 50%;
-	left: 50%;
-	top:-120px;
-	animation: leftBounce 3s ease-in-out infinite
-}
-.effect-4{
-	border-top: 30px solid transparent;
-	border-left: 30px solid #06d79c;
-	left: 30%;
-	top: 20%;
-	animation: spin 15s linear infinite;
-}
-.effect-4:before{
-	content: '';
-	border-top: 30px solid transparent;
-	border-left: 30px solid #06d79c;
-	position: absolute;
-	opacity: 0.5;
-	left: -35px;
-	top: -25px;
-}
-.effect-5{
-	height: 50px;
-	width: 50px;
-	right: 10%;
-	top: 30%;
-	display: flex;
-	justify-content: space-between;
-	border-radius: 50%;
-	overflow: hidden;
-	animation: spin 10s linear infinite;
-}
-.effect-5 div{
-	width: 1px;
-	background-color: #4dd0e1;
-}
-@keyframes spin{
-	0%{
-		transform: rotate(0deg);
-	}
-	100%{
-		transform: rotate(360deg);
-	}
-}
-@keyframes topBounce{
-	0%,100%{
-		transform: translateY(0);
-	}
-	50%{
-		transform: translateY(25px);
-	}
-}
-@keyframes leftBounce{
-	0%,100%{
-		transform: translateX(0);
-	}
-	50%{
-		transform: translateX(25px);
-	}
-}
-@keyframes fadeInTop{
-	0%{
-		opacity: 0;
-		transform: translateY(-25px);
-	}
-	100%{
-		opacity: 1;
-		transform: translateY(0px;);
-	}
-}
+
 
 .section-title{
 	padding: 0 15px;
@@ -426,28 +326,15 @@ img{
 	text-transform: capitalize;
 	margin: 0;
 }
-.home-section .home-text h2{
-	font-size: 60px;
-	font-weight: 700;
-	color: var(--text-black-900);
-	margin: 0;
-}
-.home-section .home-text h1{
-	font-size: 22px;
-	font-weight: 500;
-	color: var(--text-black-600);
-	margin: 0;
-	text-transform: capitalize;
-}
-.home-section .home-text .btn-1{
-	margin-top: 30px;
-}
 .home-section .home-img .img-box{
 	max-width: 400px;
 	display: block;
 	margin: auto;
 	border-radius: 50%;
+	
 	padding: 15px;
+	position: relative;
+	margin-left: 700px;
 }
 .home-section .home-img .img-box img{
 	width: 100%;
@@ -1324,3 +1211,116 @@ html .smoked h1 span:nth-child(16)
 	animation-delay: 4.5s;
 }
 
+
+section {
+	height: 100vh;
+	overflow: hidden;
+}
+
+.bg img{
+	width: 110vw;
+	height: 110vh;
+	filter: brightness(0.6);
+}
+.rock1{
+	position: absolute !important;
+	left: 10vw !important;
+	top: 20vh !important;
+}
+
+.rock1 img{
+	width: 40%;
+	filter: brightness(0.5);
+}
+
+.earth img{
+	width: 400px;
+	height: 400px;
+	position: relative;
+	margin-top: 10vh;
+	margin-left: 20vw;
+	z-index: 5;
+	filter: brightness(0.7);
+}
+.mid{
+	left: -150px !important;
+	bottom: -100px !important;
+	top: unset !important;
+}
+
+.mid img{
+	width: 100%;
+	z-index: 2;
+	left: -20px;
+	top: 20vh !important;
+	filter: brightness(0.8);
+}
+
+
+.fore{
+	right: -50px !important;
+	bottom: -200px !important;
+	top: 0px !important;
+	left: unset !important;
+}
+
+.fore img{
+	width: 400px;
+	height: 110vh;
+	z-index: 3;
+	filter: brightness(0.5);
+}
+
+.text h1{
+	font-family: "AlphaCentauri" !important;
+	font-size: 1vw;
+	color: #fff;
+	letter-spacing: 2px;
+	position: absolute;
+	top: 35vh;
+	left: 34vw;
+}
+
+.hyper a{
+	font-family: "AlphaCentauri" !important;
+	font-size: 2.5vw;
+	color: #fff;
+	letter-spacing: 1px;
+	position: absolute;
+	top: 58vh;
+	left: 48vw;
+	text-decoration: none;
+}
+
+.praddy_image{
+	
+	position:relative;
+	margin-top: -5vh;
+	margin-left: 55vw;
+	margin-right: auto;
+	z-index: 10;
+	height: 300px;
+}
+
+.praddy-text {
+	position: relative;
+	font-weight: bolder;
+	color: white;
+	margin-top: 30vh;
+	margin-left: 30vw;
+	margin-right: auto;
+	z-index: 11;
+	font-size: 50px;
+} 
+
+.praddy-text h1{
+	position: relative;
+	font-weight: bolder;
+	color: white;
+	border: red;
+	margin-top: -35vh;
+	margin-left: -34vw;
+	margin-right: auto;
+	z-index: 12;
+	font-size: 20px;
+} 

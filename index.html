@@ -16,6 +16,8 @@
   <link rel="stylesheet" type="text/css" class="alternate-style" title="color-5" href="css/skins/color-5.css" disabled>
   <link rel="stylesheet" type="text/css" href="css/style-switcher.css">
   <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 </head>
 <body class="dark">
@@ -54,38 +56,51 @@
 	</div>
 
 
-<section class="home-section section active" id="home">
-	<!---------effect wrap start------>
 
-	<div class="effect-wrap">
-		<div class="effect effect-1">
-		</div>
-		<div class="effect effect-2">
-			<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-	</div>
-	<div class="effect effect-3"></div>
-	<div class="effect effect-4"></div>
-	<div class="effect effect-5">
-		<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-	</div>
-	</div>
+	
+	<!--Added Part Starts-->
 
-	<!---------effect wrap end-------->
-	<div class="container">
-		<div class="row full-screen align-items-center">
-			<div class="home-text">
-				<p>Welcome to</p>
-				<h2>XoRphillic</h2>
-				<h1>Changing the way you perceive!</h1>
-				<!--<a href="#about" class="link-item btn-1 outer-shadow hover-in-shadow">Explore</a>-->
+	<section id="sectionone" class="screen">
+		<div id="scene">
+			<div data-depth="0.1" class="bg">
+				<img src="images/background.png" alt="">
 			</div>
-			<div class="home-img">
-				<div class="img-box inner-shadow">
-					<img src="img/logocircle.png" class="outer-shadow" alt="profile-pic">
+			<div data-depth="0.2" class="rock1">
+				<img src="images/rock.png">
+			</div>
+			<div data-depth="1.2" class="earth">
+				<img src="images/earth.png">
+			</div>
+			<div data-depth="0.1" class="text">
+				<div class="container">
+					<div class="row full-screen align-items-center">
+						<div class="praddy-text">
+							<p>Welcome to</p>
+							<h2>XoRphillic</h2>
+							<h1>Changing the way you perceive!</h1>
+							<!--<a href="#about" class="link-item btn-1 outer-shadow hover-in-shadow">Explore</a>-->
+						</div>
+								<img class="praddy_image" src="img/logocircle.png"  alt="profile-pic">
+					</div>
 				</div>
 			</div>
+				
+			<div data-depth="0.4" class="mid">
+				<img src="images/mid.png">
+			</div>
+			<div data-depth="0.1" class="fore">
+				<img src="images/foreground.png">
+			</div>
+
+				
 		</div>
-	</div>
+	</section>
+
+	<!--Added Part Ends-->
+
+
+
+	
 </section>
 
 <!--------about section-------->
@@ -391,7 +406,7 @@
 						<span class="view-project">more</span>
 					</div>
 					<p class="portfolio-item-title">Sainik</p>
-
+				
 					<div class="portfolio-item-details">
 						<div class="row">
 							<div class="description">
@@ -572,7 +587,7 @@
 		</div>
 	</div>
 
-	<div class="style-switcher outer-shadow">
+	<!--<div class="style-switcher outer-shadow">
 		<div class="style-switcher-toggler s-icon outer-shadow hover-in-shadow">
 			<i class="fas fa-cog fa-spin"></i>
 		</div>
@@ -588,7 +603,7 @@
 			<span class="color-5" onclick="setActiveStyle('color-5')"></span>
 		</div>
 	</div>
-
+-->
 	<!---------project section end------->
 
 	<!-----------testinomial section start------->
@@ -772,8 +787,12 @@
 
 <!-- main js -->
 <script src="js/main.js"></script>
-<!-- style switcher js -->
-<script src="js/style-switcher.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="landingindex.js"></script>
+
 </body>
 </html>
 
