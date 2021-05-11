@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: xorphilic.co
+Token: e2380e5fd136091aa05f40ec6cad7137e17166fb079e5de2e0fe1d97f7a57b84
