@@ -11,6 +11,9 @@ File: Layout CSS
 @import url("font-awesome.min.css");
 @import url("framework.css");
 
+:root{
+	--black:black;
+}
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
 .row1, .row1 a{}
@@ -24,19 +27,20 @@ File: Layout CSS
 --------------------------------------------------------------------------------------------------------------- */
 #header{}
 
-#header #logo{margin:30px 0 0 0;}
+#header #logo{margin:30px 0 0 0;width:fit-content}
+#header img{height:5rem}
 #header #logo h1{margin:0; padding:0; font-size:22px;}
 
 
 /* Page Intro
 --------------------------------------------------------------------------------------------------------------- */
-#pageintro{padding:180px 0; text-align:center;}
+#home{padding:180px 0; text-align:center;}
 
-#pageintro > div{display:block; max-width:60%; margin:0 auto;}
-#pageintro > div *{line-height:normal;}
-#pageintro .heading{margin:0 0 30px 0; padding:0; font-size:4rem; font-weight:700;}
-#pageintro p{margin:0; font-size:1.2rem; line-height:2rem;}
-#pageintro footer{margin-top:30px;}
+#home > div{display:block; max-width:60%; margin:0 auto;}
+#home > div *{line-height:normal;}
+#home .heading{margin:0 0 30px 0; padding:0; font-size:4rem; font-weight:700;}
+#home p{margin:0; font-size:1.2rem; line-height:2rem;}
+#home footer{margin-top:30px;}
 
 
 /* Content Area
@@ -167,9 +171,15 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 #mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"FontAwesome"; font-size:10px; line-height:10px;}
 
 /* Top Navigation */
-#mainav{}
-#mainav ul.clear{margin-top:3px;}
-#mainav ul{text-transform:uppercase;}
+#mainav{position: fixed;
+	top: 10;
+	left: 0;
+	z-index: 9999;
+	width: 100%;	
+	background-color: black;
+	padding:0 3rem}
+
+#mainav ul{text-transform:uppercase;display:inline-block; float:right; }
 #mainav ul ul{z-index:9999; position:absolute; width:180px; text-transform:none;}
 #mainav ul ul ul{left:180px; top:0;}
 #mainav li{display:inline-block; position:relative; margin:0 15px 0 0; padding:0;}
@@ -366,7 +376,7 @@ table a, #comments a{background-color:inherit;}
 @media screen and (max-width:900px){
 	.hoc{max-width:90%;}
 
-	#header{padding:30px 0 15px;}
+	#header{padding:0px 0 15px;}
 	#header #logo{margin:0;}
 
 	#mainav{}
@@ -398,6 +408,7 @@ table a, #comments a{background-color:inherit;}
 	.sectiontitle{max-width:none; text-align:left;}
 	.excerpts article{max-width:320px;}
 	#stats{text-align:left;}
+	
 
 	#footer{padding-bottom:50px;}/* Not needed, just looks better */
 }
