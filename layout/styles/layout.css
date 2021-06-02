@@ -12,8 +12,14 @@ File: Layout CSS
 @import url("framework.css");
 
 :root{
-	--black:black;
+	--black:#00003f;
+	--blue: #01008e;
+	--purple: #9439fc;
+	--pink:#fe00ea;
+	--red: #ff0178
 }
+
+
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
 .row1, .row1 a{}
@@ -22,7 +28,9 @@ File: Layout CSS
 .row4, .row4 a{}
 .row5, .row5 a{}
 
-
+*{
+	font-family:Arial, Helvetica, sans-serif
+}
 /* Header
 --------------------------------------------------------------------------------------------------------------- */
 #header{}
@@ -54,14 +62,23 @@ File: Layout CSS
 .sectiontitle *{margin:0;}
 
 .services{text-align:center;}
-.services li article{padding:20px; border:1px solid;}
+/*.services li article{padding:20px; border:1px solid;}*/
 .services li article *{margin:0; padding:0;}
 .services li article i{margin-bottom:20px;}
 .services li article .heading{margin-bottom:15px; font-size:1.2rem;}
 .services li article p{}
 
+.eng, #projects{
+	background-color: #290044;
+}
 .excerpts{}
-.excerpts article{border:1px solid;}
+.excerpts article{border-radius:20px}
+/*.excerpts article{ -webkit-backdrop-filter: blur(10px);
+	backdrop-filter: saturate(180%) blur(10px);;
+}*/
+.excerpts article{
+	background: radial-gradient(circle, rgba(69,59,125,1) 0%, rgba(52,44,93,1) 50%, rgba(60,51,108,1) 100%);
+}
 .excerpts article figure{display:block; position:relative;}
 .excerpts article figure img{}
 .excerpts article figure figcaption{position:absolute; top:10px; left:10px; width:50px;}
@@ -71,13 +88,13 @@ File: Layout CSS
 .excerpts article figure figcaption time em{padding:8px 0;}
 
 /* If the image (figure) has the header (hgroup) immediately after it, the header will be given a bottom border */
-.excerpts article figure + .hgroup{border-bottom:1px solid;}
+
 
 /* If the header (hgroup) has a linked image (figure a) then the link will have an overlay on hover */
 .excerpts article .hgroup + figure > a{display:inline-block; position:relative; max-width:100%;}
 .excerpts article .hgroup + figure > a::before, .excerpts article .hgroup + figure > a::after{display:block; position:absolute; content:""; text-align:center; opacity:0;}
 .excerpts article .hgroup + figure > a::before{top:0; right:0; bottom:0; left:0;}
-.excerpts article .hgroup + figure > a::after{top:50%; left:50%; width:50px; height:50px; line-height:50px; margin:-25px 0 0 -25px; content:"\f06e";/* fa-eye */ font-family:"FontAwesome"; font-size:36px;}
+.excerpts article .hgroup + figure > a::after{top:50%; left:50%; width:50px; height:50px; line-height:50px; margin:-25px 0 0 -25px; content:"\f06e";/* fa-eye */  font-size:36px;}
 .excerpts article .hgroup + figure > a:hover::before, .excerpts article .hgroup + figure > a:hover::after{opacity:1;}
 
 .excerpts article .hgroup, .excerpts article .txtwrap, .excerpts article footer{padding:20px;}
@@ -168,7 +185,7 @@ Delete it completely to stop fading
 nav ul, nav ol{margin:0; padding:0; list-style:none;}
 
 #mainav, #breadcrumb, .sidebar nav{line-height:normal;}
-#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"FontAwesome"; font-size:10px; line-height:10px;}
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute;  font-size:10px; line-height:10px;}
 
 /* Top Navigation */
 #mainav{position: fixed;
@@ -255,7 +272,7 @@ td{border-width:0 1px;}
 .faico li:last-child{margin-right:0;}
 .faico a{display:inline-block; width:36px; height:36px; line-height:36px; font-size:18px; text-align:center;}
 
-.faico a{color:#FFFFFF; background-color:rgba(162,183,13,.5)/* #A2B70D */;}
+.faico a{color:#FFFFFF; background-color:var(--purple)/* #5503b4 */;}
 
 .faicon-dribble:hover{background-color:#EA4C89;}
 .faicon-facebook:hover{background-color:#3B5998;}
@@ -275,23 +292,26 @@ td{border-width:0 1px;}
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
 body{color:#CBCBCB; background-color:#191919;}
-a{color:#A2B70D;}
+a{color:#a352ff;}
 a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
 hr, .borderedbox{border-color:#D7D7D7;}
+.join-symbol{
+	color:#5503b4;
+}
 label span{color:#FF0000; background-color:inherit;}
-input:focus, textarea:focus, *:required:focus{border-color:#A2B70D;}
+input:focus, textarea:focus, *:required:focus{border-color:#5503b4;}
 .overlay{color:#FFFFFF; background-color:inherit;}
 .overlay::after{color:inherit; background-color:rgba(0,0,0,.4);}
-.overlay.coloured::after{background-color:#414905;}
+.overlay.coloured::after{background-color:black;}
 
-.btn, .btn.inverse:hover{color:#FFFFFF; background-color:#A2B70D; border-color:#A2B70D;}
+.btn, .btn.inverse:hover{color:#FFFFFF; background-color:#9439fc; border-color:#5503b4;}
 .btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
 
 
 /* Rows */
 .row1{color:#FFFFFF; background-color:rgba(0,0,0,.60);}
 .row2{color:#191919; background-color:#F6F6F6;}
-.row3{color:#191919; background-color:#FFFFFF;}
+.row3{color:white; }
 .row4{color:#CBCBCB;}
 .row5, .row5 a{color:#CBCBCB; background-color:#191919;}
 
@@ -301,51 +321,65 @@ input:focus, textarea:focus, *:required:focus{border-color:#A2B70D;}
 
 
 /* Content Area */
-.services li article{border-color:#D7D7D7;}
+/*.services li article{border-color:#D7D7D7;}*/
 .services li article > a{color:inherit;}
-.services li article:hover > a i{color:#A2B70D;}
 
-.excerpts article{border-color:#EDEDED; box-shadow:0px 0px 5px 5px #EDEDED;}/* There is sadly no box-shadow-color, so the full tag is here */
-.excerpts article:hover{border-color:#A2B70D; box-shadow:0px 0px 5px 5px rgba(162,183,13,.2)/* #A2B70D */;}
+.services li article  a i{color:#5503b4;}
+.services li article:hover > a i {color:#CBCBCB;}
+
+
+/*.excerpts article{border-color:#EDEDED; box-shadow:0px 0px 5px 5px #5503b4;}/* There is sadly no box-shadow-color, so the full tag is here */
+/*.excerpts article:hover{border-color:#5503b4; box-shadow:0px 0px 5px 5px rgba(162,183,13,.2)/}*/
 
 .excerpts article figure figcaption{color:#FFFFFF;}
-.excerpts article figure figcaption time strong{color:#414905; background-color:#EDEDED;}
-.excerpts article figure figcaption time em{color:#414905; background-color:#DADADA;}
-.excerpts article figure + .hgroup, .excerpts article footer{border-color:#EDEDED;}
+.excerpts article figure figcaption time strong{color:var(--black); background-color:#EDEDED;}
+.excerpts article figure figcaption time em{color:#250549; background-color:#DADADA;}
+/*.excerpts article figure + .hgroup, .excerpts article footer{border-color:#EDEDED;}*/
 .excerpts article .hgroup + figure > a{color:inherit;}
 .excerpts article .hgroup + figure > a:hover::before{background:rgba(0,0,0,.2);}
 .excerpts article .hgroup + figure > a:hover::after{color:#FFFFFF;}
 
 
+
+
+#cpy{
+	background-color: #310268;
+	text-align: center;
+}
 /* Footer */
-#footer .heading{color:#FFFFFF;}
-#footer hr, #footer .borderedbox, #footer .linklist li{border-color:rgba(255,255,255,.2);}
+#footer{
+	background-color: #5503b4;
+}
+
+#footer .heading{
+	color:#FFFFFF;}
+#footer hr, #footer .borderedbox, #footer .linklist li{border-color:rgba(51, 2, 66, 0.2);}
 #footer nav a{color:inherit;}
-#footer nav li:first-child a, #footer nav a:hover{color:#A2B70D;}
+#footer nav li:first-child a, #footer nav a:hover{color:#5503b4;}
 
 
 /* Navigation */
 #mainav li a{color:inherit;}
-#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#A2B70D; background-color:inherit;}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#5503b4; background-color:inherit;}
 #mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(0,0,0,.5); border-color:rgba(0,0,0,.1);}
-#mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#A2B70D;}
+#mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#5503b4;}
 #mainav form select{color:#FFFFFF; background-color:#000000; border-color:rgba(255,255,255,.2);}
 
 #breadcrumb a{color:inherit; background-color:inherit;}
-#breadcrumb li:last-child a{color:#A2B70D;}
+#breadcrumb li:last-child a{color:#5503b4;}
 
 .container .sidebar nav a{color:inherit; border-color:#D7D7D7;}
-.container .sidebar nav a:hover{color:#A2B70D;}
+.container .sidebar nav a:hover{color:#5503b4;}
 
 .pagination a, .pagination strong{border-color:#D7D7D7;}
-.pagination .current *{color:#FFFFFF; background-color:#A2B70D;}
+.pagination .current *{color:#FFFFFF; background-color:#5503b4;}
 
-#backtotop{color:#FFFFFF; background-color:#A2B70D;}
+#backtotop{color:#FFFFFF; background-color:#5503b4;}
 
 
 /* Tables + Comments */
 table, th, td, #comments .avatar, #comments input, #comments textarea{border-color:#D7D7D7;}
-#comments input:focus, #comments textarea:focus, #comments *:required:focus{border-color:#A2B70D;}
+#comments input:focus, #comments textarea:focus, #comments *:required:focus{border-color:#5503b4;}
 th{color:#FFFFFF; background-color:#373737;}
 tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]{color:inherit; background-color:#FBFBFB;}
 tr:nth-child(even), #comments li:nth-child(even){color:inherit; background-color:#F7F7F7;}
@@ -365,15 +399,16 @@ table a, #comments a{background-color:inherit;}
 .event{
 	display:flex;
 	justify-content: space-between;
+	
 }
 .event-left{
 flex-grow:1;
-border:1px solid black;
+
 }
 .event-right{
 flex-grow:3;
 text-align:center;
-border:1px solid black;
+
 }
 /* Max Wrapper Width - Laptop, Desktop etc.
 --------------------------------------------------------------------------------------------------------------- */
@@ -437,7 +472,22 @@ border:1px solid black;
 	.font-x2{font-size:1.4rem;}
 	.font-x3{font-size:1.6rem;}
 
-	#pageintro{padding:140px 0;}
-	#pageintro > div{max-width:none;}
-	#pageintro .heading{font-size:2.2rem;}
+	#home{padding:140px 0;}
+	#home > div{max-width:none;}
+	#home .heading{font-size:2.2rem;}
+
+
+	.event{
+		display:block;
+		justify-content: space-between;
+	}
+	.event-left{
+	text-align:center;
+	
+	}
+	.event-right{
+	
+	text-align:center;
+	
+	}
 }
