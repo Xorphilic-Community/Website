@@ -153,7 +153,7 @@ If you don't want it to fade all elements, you have to list the ones you want to
 Delete it completely to stop fading
 --------------------------------------------------------------------------------------------------------------- */
 *, *::before, *::after{transition:all .3s ease-in-out;}
-#mainav form *{transition:none !important;}
+#mainav form *{transition:all .3s ease-in-out !important;}
 
 
 /* ------------------------------------------------------------------------------------------------------------ */
@@ -362,8 +362,19 @@ table a, #comments a{background-color:inherit;}
 /* Media Queries
 --------------------------------------------------------------------------------------------------------------- */
 @-ms-viewport{width:device-width;}
-
-
+.event{
+	display:flex;
+	justify-content: space-between;
+}
+.event-left{
+flex-grow:1;
+border:1px solid black;
+}
+.event-right{
+flex-grow:3;
+text-align:center;
+border:1px solid black;
+}
 /* Max Wrapper Width - Laptop, Desktop etc.
 --------------------------------------------------------------------------------------------------------------- */
 @media screen and (min-width:978px){

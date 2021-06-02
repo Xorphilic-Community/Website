@@ -6,7 +6,8 @@ mainNavLinks.forEach(link => {
   let section = document.querySelector(link.hash);
   jQuery(link).click(function () {
     jQuery("body,html").animate({
-        scrollTop: section.offsetTop 
+        scrollTop: section.offsetTop,
+        
     }, 600);
 });
 })
@@ -26,10 +27,11 @@ window.addEventListener("scroll", event => {
   let fromTop = window.scrollY;
   mainNavLinks.forEach(link => {
   let section = document.querySelector(link.hash);
+  console.log(section.offsetTop+"---"+fromTop)
  
     if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
+      section.offsetTop -300<= fromTop &&
+      section.offsetTop + section.offsetHeight-300 > fromTop
     ) {
         
       link.parentElement.classList.add("active");
@@ -37,3 +39,4 @@ window.addEventListener("scroll", event => {
       link.parentElement.classList.remove("active");
     }
   })})
+  
