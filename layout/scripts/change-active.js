@@ -1,8 +1,17 @@
 let mainNavLinks = document.querySelectorAll("header nav ul li a");
 let mainSections = document.querySelectorAll("body div");
 
-let lastId;
-let cur = [];
+mainNavLinks.forEach(link => {
+    console.log(link)
+  let section = document.querySelector(link.hash);
+  jQuery(link).click(function () {
+    jQuery("body,html").animate({
+        scrollTop: section.offsetTop 
+    }, 600);
+});
+})
+
+
 
 // This should probably be throttled.
 // Especially because it triggers during smooth scrolling.
@@ -15,19 +24,16 @@ let cur = [];
 
 window.addEventListener("scroll", event => {
   let fromTop = window.scrollY;
-
   mainNavLinks.forEach(link => {
-      
-    let section = document.querySelector(link.hash);
-
+  let section = document.querySelector(link.hash);
+ 
     if (
       section.offsetTop <= fromTop &&
       section.offsetTop + section.offsetHeight > fromTop
     ) {
-        console.log(link.hash)
+        
       link.parentElement.classList.add("active");
     } else {
       link.parentElement.classList.remove("active");
     }
-  });
-});
+  })})
