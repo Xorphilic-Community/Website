@@ -359,7 +359,10 @@ input:focus, textarea:focus, *:required:focus{border-color:#5503b4;}
 #footer nav a{color:inherit;}
 #footer nav li:first-child a, #footer nav a:hover{color:#5503b4;}
 
-
+#join-us .heading{
+	text-align:center;
+	padding:2rem;
+}
 /* Navigation */
 #mainav li a{color:inherit;}
 #mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#5503b4; background-color:inherit;}
