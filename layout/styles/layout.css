@@ -361,7 +361,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#5503b4;}
 
 #join-us .heading{
 	text-align:center;
-	padding:2rem;
+	padding:3rem;
 }
 /* Navigation */
 #mainav li a{color:inherit;}
