@@ -2,7 +2,7 @@ let mainNavLinks = document.querySelectorAll("header nav ul li a");
 let mainSections = document.querySelectorAll("body div");
 
 mainNavLinks.forEach(link => {
-    console.log(link)
+   
   let section = document.querySelector(link.hash);
   jQuery(link).click(function () {
     jQuery("body,html").animate({
@@ -11,8 +11,17 @@ mainNavLinks.forEach(link => {
     }, 600);
 });
 })
-
-
+let NavLinks = document.querySelectorAll('a[href*="#about"]');
+NavLinks.forEach(link => {
+  console.log(link)
+let section = document.querySelector(link.hash);
+jQuery(link).click(function () {
+  jQuery("body,html").animate({
+      scrollTop: section.offsetTop,
+      
+  }, 600);
+});
+})
 
 // This should probably be throttled.
 // Especially because it triggers during smooth scrolling.
