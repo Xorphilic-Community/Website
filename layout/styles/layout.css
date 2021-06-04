@@ -502,15 +502,15 @@ width:55%;
 	#home .heading{font-size:2.7rem;}
 
 
-	.event{
+	.event, .join{
 		display:block;
 		justify-content: space-between;
 	}
-	.event-left{
+	.event-left, .join-left{
 	text-align:center;
 	
 	}
-	.event-right{
+	.event-right, .join-right{
 	
 	text-align:center;
 	
