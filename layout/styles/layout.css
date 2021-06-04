@@ -359,10 +359,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#5503b4;}
 #footer nav a{color:inherit;}
 #footer nav li:first-child a, #footer nav a:hover{color:#5503b4;}
 
-#join-us .heading{
-	text-align:center;
-	padding:3rem;
-}
+
 /* Navigation */
 #mainav li a{color:inherit;}
 #mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#5503b4; background-color:inherit;}
@@ -390,17 +387,6 @@ tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]{
 tr:nth-child(even), #comments li:nth-child(even){color:inherit; background-color:#F7F7F7;}
 table a, #comments a{background-color:inherit;}
 
-
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-
-
-/* Media Queries
---------------------------------------------------------------------------------------------------------------- */
-@-ms-viewport{width:device-width;}
 .event{
 	display:flex;
 	justify-content: space-between;
@@ -415,6 +401,40 @@ flex-grow:3;
 text-align:center;
 
 }
+.join{
+	display:flex;
+	justify-content: space-between;
+	
+}
+.join-left{
+
+flex-grow:1;
+padding:1rem;
+margin-right:4rem;
+
+}
+.join-right{
+flex-grow:1;
+text-align:center;
+width:55%;
+
+}
+.headingJoin{
+	margin:1rem;
+	text-align: center;
+	padding-bottom:3rem;
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+
+/* Media Queries
+--------------------------------------------------------------------------------------------------------------- */
+@-ms-viewport{width:device-width;}
+
 /* Max Wrapper Width - Laptop, Desktop etc.
 --------------------------------------------------------------------------------------------------------------- */
 @media screen and (min-width:978px){
