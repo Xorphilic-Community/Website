@@ -390,16 +390,26 @@ table a, #comments a{background-color:inherit;}
 .event{
 	display:flex;
 	justify-content: space-between;
+	padding-bottom:0;
 	
 }
 .event-left{
 flex-grow:1;
-
+padding-top:10rem;
 }
 .event-right{
 flex-grow:3;
 text-align:center;
+display:flex;
 
+
+}
+.event-right-left{
+	flex:1;
+	padding-top:10rem;
+} .event-right-right{
+	flex:1;
+	
 }
 .join{
 	display:flex;
@@ -413,6 +423,7 @@ padding:1rem;
 margin-right:4rem;
 text-align:center;
 padding-top:8rem;
+
 
 }
 .join-right{
