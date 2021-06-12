@@ -276,12 +276,14 @@ td{border-width:0 1px;}
 
 .faico a{color:#FFFFFF; background-color:var(--purple)/* #5503b4 */;}
 
-.faicon-dribble:hover{background-color:#EA4C89;}
+.faicon-instagram:hover{background-color:#ee050e;}
 .faicon-facebook:hover{background-color:#3B5998;}
 .faicon-google-plus:hover{background-color:#DB4A39;}
 .faicon-linkedin:hover{background-color:#0E76A8;}
 .faicon-twitter:hover{background-color:#00ACEE;}
-.faicon-vk:hover{background-color:#4E658E;}
+.faicon-youtube-play:hover{background-color:#cc0000;}
+.faicon-mail:hover{background-color:#f0a6a6;}
+
 
 
 /* ------------------------------------------------------------------------------------------------------------ */
@@ -536,4 +538,10 @@ width:55%;
   width:70%;
   
 	}
+}
+
+.fontsiz{
+	font-size: 300%;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: #7d3fc4;
 }
