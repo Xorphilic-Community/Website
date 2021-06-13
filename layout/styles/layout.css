@@ -545,3 +545,10 @@ width:55%;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	color: #7d3fc4;
 }
+
+.align{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+
+}
