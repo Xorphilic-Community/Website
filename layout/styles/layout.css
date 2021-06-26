@@ -63,7 +63,7 @@ File: Layout CSS
 .sectiontitle{display:block; max-width:60%; margin:0 auto 80px; text-align:center;}
 .sectiontitle *{margin:0;}
 
-.services{text-align:center;}
+.services{text-align:center;  display: grid; grid-template-columns: 200px 200px 200px; justify-content: center;}
 /*.services li article{padding:20px; border:1px solid;}*/
 .services li article *{margin:0; padding:0;}
 .services li article i{margin-bottom:20px;}
@@ -109,6 +109,8 @@ File: Layout CSS
 .excerpts article .hgroup .meta li:last-child::after{margin:0; content:"";}
 .excerpts article .txtwrap *{margin:0; padding:0;}
 .excerpts article footer{border-top:1px solid;}
+
+
 
 #stats{text-align:center;}
 #stats li *{margin:0; padding:0;}
@@ -352,7 +354,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#5503b4;}
 }
 /* Footer */
 #footer{
-	background-color: #5503b4;
+	background-color: #3b017e;
 }
 
 #footer .heading{
@@ -431,7 +433,7 @@ padding-top:8rem;
 .join-right{
 flex-grow:1;
 text-align:center;
-width:55%;
+width:40%;
 
 
 }
@@ -457,6 +459,10 @@ width:55%;
 	.hoc{max-width:978px;}
 }
 
+@media screen and (max-width:978px){
+	
+	#home .heading {margin-top:6rem; font-size:70px}
+}
 
 /* Mobile Devices
 --------------------------------------------------------------------------------------------------------------- */
@@ -465,6 +471,7 @@ width:55%;
 
 	#header{padding:0px 0 15px;}
 	#header #logo{margin:0;}
+	#home .heading {margin-top:5rem; font-size:60px}
 
 	#mainav{}
 	#mainav ul{display:none;}
@@ -483,7 +490,7 @@ width:55%;
 }
 
 
-@media screen and (max-width:750px){
+@media screen and (max-width:850px){
 	.imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
 	.fl_left, .fl_right{display:block; float:none;}
 	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 30px 0; padding:0;}
@@ -503,7 +510,7 @@ width:55%;
 
 /* Other
 --------------------------------------------------------------------------------------------------------------- */
-@media screen and (max-width:650px){
+@media screen and (max-width:700px){
 	.scrollable{display:block; width:100%; margin:0 0 30px 0; padding:0 0 15px 0; overflow:auto; overflow-x:scroll;}
 	.scrollable table{margin:0; padding:0; white-space:nowrap;}
 

@@ -45,7 +45,7 @@ a{outline:none; text-decoration:none;}
 img{width:auto; max-width:100%; height:auto; margin:0; padding:0; border:none; line-height:normal; vertical-align:middle;}
 .imgl{margin:0 15px 10px 0; clear:left;}
 .imgr{margin:0 0 10px 15px; clear:right;}
-
+a img{width:70%; }
 
 /* Fonts
 --------------------------------------------------------------------------------------------------------------- */
@@ -68,7 +68,10 @@ label{margin-bottom:5px;}
 /* Generalise
 --------------------------------------------------------------------------------------------------------------- */
 
-h1, h2, h3, h4, h5, h6, .heading{margin:0 0 20px 0; font-size:22px; line-height:normal; font-weight:normal; text-transform:uppercase;}
+h1, h2, h3, h4,  .heading{margin:0 0 20px 0; font-size:30px; line-height:normal; font-weight:normal; text-transform:uppercase;}
+h5, h6{
+    margin:0 0 20px 0; font-size:22px; line-height:normal; font-weight:normal; text-transform:uppercase;
+}
 .heading.nospace{margin-bottom:0;}
 
 address{font-style:normal; font-weight:normal;}

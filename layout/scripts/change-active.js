@@ -22,7 +22,17 @@ jQuery(link).click(function () {
   }, 600);
 });
 })
-
+ NavLinks = document.querySelectorAll('a[href*="#events"]');
+NavLinks.forEach(link => {
+  console.log(link)
+let section = document.querySelector(link.hash);
+jQuery(link).click(function () {
+  jQuery("body,html").animate({
+      scrollTop: section.offsetTop,
+      
+  }, 600);
+});
+})
 // This should probably be throttled.
 // Especially because it triggers during smooth scrolling.
 // https://lodash.com/docs/4.17.10#throttle
