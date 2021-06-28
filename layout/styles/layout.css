@@ -63,7 +63,7 @@ File: Layout CSS
 .sectiontitle{display:block; max-width:60%; margin:0 auto 80px; text-align:center;}
 .sectiontitle *{margin:0;}
 
-.services{text-align:center;  display: grid; grid-template-columns: 200px 200px 200px; justify-content: center;}
+.services{text-align:center;  display: grid; grid-template-columns: 200px 200px 200px; justify-content: center; padding-left: 2rem;}
 /*.services li article{padding:20px; border:1px solid;}*/
 .services li article *{margin:0; padding:0;}
 .services li article i{margin-bottom:20px;}
@@ -484,7 +484,7 @@ padding-top:8rem;
 
 	#header{padding:0px 0 15px;}
 	#header #logo{margin:0;}
-	#home .heading {margin-top:5rem; font-size:60px}
+	#home .heading {margin-top:10rem; font-size:60px}
 
 	#mainav{}
 	#mainav ul{display:none;}
@@ -500,6 +500,8 @@ padding-top:8rem;
 
 	#copyright{}
 	#copyright p:first-of-type{margin-bottom:10px;}
+	.sectiontitle{ max-width: 90%; margin:auto; padding-bottom:2rem;}
+	.services{display: grid; grid-template-columns: 150px 150px 150px; justify-content: center;}
 }
 
 
@@ -515,8 +517,34 @@ padding-top:8rem;
 	.sectiontitle{max-width:none; text-align:left;}
 	.excerpts article{max-width:320px;}
 	#stats{text-align:left;}
+	.event{
+		padding-bottom:30px;
+	}
+	.event-right{
+		margin-left:20px;
+	}
+	.event-right #timer-text{
+		font-size: 30px;
+	}
+	.event-right-right img{
+		margin-top:70px;
+		margin-bottom:-30px;
+	}
+	.join{
+		padding:10px;
+	}
+.join-left{
 	
-
+	margin:0;
+	margin-left:-210px;
+	margin-top:40px;
+	
+	
+}
+.join-img{
+	width:2500px;
+	margin-right:-250px;
+}
 	#footer{padding-bottom:50px;}/* Not needed, just looks better */
 }
 
@@ -535,29 +563,30 @@ padding-top:8rem;
 
 	#home{padding:140px 0; }
 	#home > div{max-width:none;}
-	#home .heading{font-size:2.7rem;}
+	#home .heading{font-size:2.9rem; margin-top:13rem; margin-bottom: -1rem;}
+	.services{display: grid; grid-template-columns: 120px 150px 120px; justify-content: center; padding-left:30vh; margin-top:1rem;}
 
-
-	.event, .join{
+	.join{
 		display:block;
-		justify-content: space-between;
 	}
-	.event-left{
-	text-align:center;
-	
-	}
-	.event-right {
-	
-	text-align:center;
-	
-	}
-	.join-right, .join-left{
+	.join-left, .join-img{
+		
 		display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom:1rem;
-  width:70%;
-  
+		width:100%;
+		margin:auto ;
+		padding: 0;
+	}
+
+	.join-img{
+		margin-left: 25%;
+	}
+	.join-left{
+		width:80%;
+		margin-top:-3rem;
+	}
+	#about .sectiontitle{
+		width: 350px;
+		
 	}
 }
 
@@ -572,4 +601,59 @@ padding-top:8rem;
 	justify-content: center;
 	align-content: center;
 
+}
+
+@media screen and (max-width:600px){
+
+	.event{
+		display:block;
+	}
+	.event-right-left{
+		text-align:center;
+		padding-top:50px;
+	}
+	.event-right-right{
+		margin-top:-70px;
+	}
+	.event-left{
+		text-align: center;
+		
+	}
+}
+
+@media screen and (max-width:550px){
+	#home .heading{
+		margin-top:10rem;
+		margin-left:1rem;
+		
+	}
+	#home footer{
+		margin-left:1rem;
+		margin-bottom: -5rem;
+	}
+#about{
+	background: none;
+	padding-top:0;
+}
+
+#about .sectiontitle
+{
+	width: 350px;
+	text-align: center;
+	padding :0;
+	margin:auto;
+	
+	margin-top:-4rem;
+
+}
+#about .services{
+	text-align: center;
+	
+	width:350px;
+	margin-left:-90px;
+	display: block;
+}
+#about .services li{
+	margin-top:40%;
+}
 }
