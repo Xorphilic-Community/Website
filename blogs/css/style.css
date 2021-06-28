@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.center{
+    text-align: center;
+}
+
+/*Youtube responsive feature start*/
+.grow :hover{
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+    transition: 1s ease;
+    }
+
+    .video-responsive{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+    }
+    .video-responsive iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    }
+/*Youtube responsive feature End*/    
+
+.footer{
+    background-color: #22004C;
+    padding-top: 30px;
+}
+
+.nonewline a{
+    color: white;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.nonewline a:hover{
+    color: #9742ff;
+}
+
+.bi{
+    font-size: 190%;
+    margin-right: 5px;
+}
