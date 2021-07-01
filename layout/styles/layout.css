@@ -697,3 +697,7 @@ padding-top:8rem;
 	width: 340px;
 	height: 220px;
 }
+
+a{
+	text-decoration: wavy !important;
+}
