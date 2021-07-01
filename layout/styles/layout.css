@@ -695,11 +695,14 @@ padding-top:8rem;
     font-size: 14px;
     text-align: center;
     overflow: hidden;
-    min-height: 340px;
+	min-height: 340px;
+	background-color: #3c0280;
+	border-radius: 25px;
 }
 
 .carousel .item a {
-    color: #eb7245;
+	color: #eb7245;
+	
 }
 
 .carousel .img-box {
