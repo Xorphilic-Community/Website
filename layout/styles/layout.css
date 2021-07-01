@@ -657,3 +657,7 @@ padding-top:8rem;
 	margin-top:40%;
 }
 }
+
+.border{
+	border: 3px red dotted;
+}
