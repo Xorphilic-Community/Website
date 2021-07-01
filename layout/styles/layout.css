@@ -663,3 +663,37 @@ padding-top:8rem;
 }
 
 
+.carousel{
+	width:70%;
+	margin: auto;
+	
+}
+.carousel-indicators{
+	height:0;
+	bottom: -40px;
+}
+.carousel-indicators  li, .carousel-indicators .active{
+	height: 3px !important;
+    border-radius: 0px !important;
+    width: 40px;
+}
+
+.carousel-inner{
+	width: 375px;
+	margin: auto;
+	text-align: center;
+
+	
+}
+
+.carousel-inner .item{
+	background: radial-gradient(circle, rgba(69,59,125,1) 0%, rgba(52,44,93,1) 50%, rgba(60,51,108,1) 100%);
+	padding: 20px;
+	margin:5px;
+	border-radius: 25px;
+}
+
+.carousel-inner .item img{
+	width: 340px;
+	height: 220px;
+}
