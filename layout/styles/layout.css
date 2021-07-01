@@ -687,7 +687,8 @@ padding-top:8rem;
 .carousel {
     width: 650px;
     margin: 0 auto;
-    padding-bottom: 50px;
+	padding-bottom: 50px;
+	
 }
 
 .carousel .item {
