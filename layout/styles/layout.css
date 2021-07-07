@@ -302,7 +302,7 @@ td{border-width:0 1px;}
 --------------------------------------------------------------------------------------------------------------- */
 body{color:#CBCBCB; background-color:#191919;}
 a{color:#a352ff;}
-a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
+/* a:focus{background:transparent;} IE10 + 11 Bugfix - prevents grey background */
 hr, .borderedbox{border-color:#D7D7D7;}
 .join-symbol{
 	color:#5503b4;
@@ -314,7 +314,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#5503b4;}
 .overlay.coloured::after{background-color:black;}
 
 .btn, .btn.inverse:hover{color:#FFFFFF; background-color:#9439fc; border-color:#5503b4;}
-.btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
+.btn:hover{color:inherit; background-color:transparent; border-color:inherit;}
 
 
 /* Rows */
