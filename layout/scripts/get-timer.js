@@ -1,4 +1,4 @@
-var countDownDate = new Date("Jul 6, 2021 16:37:52").getTime();
+var countDownDate = new Date("Jul 10, 2021 16:37:52").getTime();
 var text=document.getElementById("timer-text")
 var myfunc = setInterval(function() {
     var now = new Date().getTime();

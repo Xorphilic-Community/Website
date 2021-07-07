@@ -18,8 +18,11 @@ File: Layout CSS
 	--pink:#fe00ea;
 	--red: #ff0178
 }
-
-
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
 .row1, .row1 a{}
@@ -63,7 +66,7 @@ File: Layout CSS
 .sectiontitle{display:block; max-width:60%; margin:0 auto 80px; text-align:center;}
 .sectiontitle *{margin:0;}
 
-.services{text-align:center;  display: grid; grid-template-columns: 200px 200px 200px; justify-content: center; padding-left: 2rem;}
+.services{text-align:center;  display: grid; grid-template-columns: 200px 200px 200px; justify-content: left; }
 /*.services li article{padding:20px; border:1px solid;}*/
 .services li article *{margin:0; padding:0;}
 .services li article i{margin-bottom:20px;}
@@ -365,7 +368,8 @@ input:focus, textarea:focus, *:required:focus{border-color:#5503b4;}
 
 
 /* Navigation */
-#mainav li a{color:inherit;}
+
+#mainav li a{color:white;}
 #mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#5503b4; background-color:inherit;}
 #mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(0,0,0,.5); border-color:rgba(0,0,0,.1);}
 #mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#5503b4;}
@@ -470,6 +474,7 @@ padding-top:8rem;
 --------------------------------------------------------------------------------------------------------------- */
 @media screen and (min-width:978px){
 	.hoc{max-width:978px;}
+	
 }
 
 @media screen and (max-width:978px){
@@ -551,6 +556,35 @@ padding-top:8rem;
 
 /* Other
 --------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width:1400px){
+    
+	h1, h2, h3, h4,  .heading{margin:0 0 20px 0; font-size:40px; line-height:normal; font-weight:normal; text-transform:uppercase; letter-spacing: 0.1rem;}
+	h5, h6{
+		margin:0 0 20px 0; font-size:32px; line-height:normal; font-weight:normal; text-transform:uppercase;
+		letter-spacing: 0.1rem;
+	}
+	.join{
+		padding:0;
+	}
+	
+	#join-us p{
+		font-size: x-large;
+		line-height: 1.2;
+		letter-spacing: 0.1rem;
+	}
+	p{
+		letter-spacing: 0.04rem;
+	}
+
+	.join-left{
+		margin-left:-50%;
+		width: 50%;
+		margin-top:12%;
+		
+	}
+	
+	
+	}
 @media screen and (max-width:700px){
 	.scrollable{display:block; width:100%; margin:0 0 30px 0; padding:0 0 15px 0; overflow:auto; overflow-x:scroll;}
 	.scrollable table{margin:0; padding:0; white-space:nowrap;}
@@ -588,6 +622,11 @@ padding-top:8rem;
 		width: 350px;
 		
 	}
+	.services{padding: 0; margin-left:10em}
+
+	.carousel{
+			width: 90% !important;
+	}
 }
 
 .fontsiz{
@@ -622,6 +661,10 @@ padding-top:8rem;
 }
 
 @media screen and (max-width:550px){
+	#about hoc, #about container{
+		width: 100em !important;
+		display: none;
+	}
 	#home .heading{
 		margin-top:10rem;
 		margin-left:1rem;
@@ -638,7 +681,7 @@ padding-top:8rem;
 
 #about .sectiontitle
 {
-	width: 350px;
+	width: 95vw;
 	text-align: center;
 	padding :0;
 	margin:auto;
@@ -646,15 +689,32 @@ padding-top:8rem;
 	margin-top:-4rem;
 
 }
-#about .services{
+.carousel-inner{
+	width: 95% !important;
+	min-width: 330px;
+	
 	text-align: center;
 	
-	width:350px;
-	margin-left:-90px;
+}
+.carousel-control{
+	margin-top:26em !important;
+	
+}
+
+#about .services{
+	text-align: center;
+	justify-items: auto;
+	width: 50vw;
+	padding:0;
+	margin-left:25vw;
+
 	display: block;
 }
+#about .services li:first-child{
+	margin-top:20%;
+}
 #about .services li{
-	margin-top:40%;
+	margin-top:15%;
 }
 }
 
@@ -664,24 +724,30 @@ padding-top:8rem;
 
 
 .carousel{
-	width:70%;
+	width:60%;
 	margin: auto;
-	
+	background-color: none !important;
 }
 .carousel-indicators{
 	height:0;
 	bottom: -40px;
+	background-color: none !important;
 }
 .carousel-indicators  li, .carousel-indicators .active{
 	height: 3px !important;
     border-radius: 0px !important;
-    width: 40px;
+	width: 20px;
+	background-color: none;
 }
 
 .carousel-inner{
-	width: 375px;
+	
+		width: 70%  !important;
+	
 	margin: auto;
 	text-align: center;
+	background-color: none !important;
+	
 
 	
 }
@@ -691,13 +757,15 @@ padding-top:8rem;
 	padding: 20px;
 	margin:5px;
 	border-radius: 25px;
+	min-height: 35em !important;
+	max-height: 35em !important;
 }
 
+.carousel-control{
+	background: none !important;
+}
 .carousel-inner .item img{
 	width: 340px;
 	height: 220px;
 }
 
-a{
-	text-decoration: wavy !important;
-}

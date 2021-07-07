@@ -1,6 +1,7 @@
 let mainNavLinks = document.querySelectorAll("header nav ul li a");
+console.log(mainNavLinks)
 let mainSections = document.querySelectorAll("body div");
-
+console.log(mainSections)
 mainNavLinks.forEach(link => {
    
   let section = document.querySelector(link.hash);
@@ -45,17 +46,19 @@ jQuery(link).click(function () {
 window.addEventListener("scroll", event => {
   let fromTop = window.scrollY;
   mainNavLinks.forEach(link => {
+    console.log(link.hash)
   let section = document.querySelector(link.hash);
+  console.log(section)
   console.log(section.offsetTop+"---"+fromTop)
  
-    if (
+    /*if (
       section.offsetTop -300<= fromTop &&
       section.offsetTop + section.offsetHeight-300 > fromTop
     ) {
         
-      link.parentElement.classList.add("active");
+      //link.parentElement.classList.add("active");
     } else {
-      link.parentElement.classList.remove("active");
-    }
+      //link.parentElement.classList.remove("active");
+    }*/
   })})
   
