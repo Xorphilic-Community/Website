@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="layout/styles/layout.css">
+
+    <title>Push Notifications with Firebase and Unity</title>
+  </head>
+  <body >
+    <header id="header" class="hoc clear"> 
+        <nav id="mainav" class="fixed-navbar">
+          <img src="../images/XoRphilic.png"   alt="xorphilic-logo" width="15%" style="padding:10px; padding-left:20px">
+          
+        </nav>
+      </header>
+    
+    <!--Start of body-->
+    <div class="container" style="padding-top:0">
+        
+        
+        
+        <h1 class="center">Push Notifications with Firebase and Unity</h1>
+        <p><div itemprop="text" class="Box-body p-0 blob-wrapper data type-text  gist-border-0">
+            <p class="center"><a href="https://www.linkedin.com/in/praddyum/">Praddyum Verma</a><br>13 May 2020</p>
+      <br><br><br><br>
+            <table class="highlight tab-size js-file-line-container" data-tab-size="8" data-paste-markdown-skip="">
+                  <tbody><tr>
+                    <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
+                    <td id="LC1" class="blob-code blob-code-inner js-file-line"><br>Set up a Firebase Cloud Messaging client app in Unity</td>
+                  </tr>
+                  
+                  <tr>
+                    <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
+                    <td id="LC3" class="blob-code blob-code-inner js-file-line">First, Sign into Firebase using your Google account.</td>
+                  </tr>
+                  <tr>
+                    <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
+                    <td id="LC4" class="blob-code blob-code-inner js-file-line">
+            </td>
+                  </tr>
+                  <tr>
+                    <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
+                    <td id="LC5" class="blob-code blob-code-inner js-file-line">
+            </td>
+                  </tr>
+                  <tr>
+                    <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
+                    <td id="LC6" class="blob-code blob-code-inner js-file-line"><br><br><b>Step</b> 1: Create a Firebase project</td>
+                  </tr>
+                  <tr>
+                    <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
+                    <td id="LC7" class="blob-code blob-code-inner js-file-line">Before you can add Firebase to your Unity project, you need to create a Firebase project to connect to your Unity project.</td>
+                  </tr>
+                  <tr>
+                    <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
+                    <td id="LC8" class="blob-code blob-code-inner js-file-line">
+            </td>
+                  </tr>
+                  <tr>
+                    <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
+                    <td id="LC9" class="blob-code blob-code-inner js-file-line"><br><b>Step</b> 2: Register your app with Firebase</td>
+                  </tr>
+                  <tr>
+                    <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
+                    <td id="LC10" class="blob-code blob-code-inner js-file-line">You can register one or more apps or games to connect with your Firebase project.</td>
+                  </tr>
+                  <tr>
+                    <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
+                    <td id="LC11" class="blob-code blob-code-inner js-file-line">If you're releasing your game on both iOS and Android, register both build targets of your Unity project with the same Firebase project.</td>
+                  </tr>
+                  
+                  <tr>
+                    <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
+                    <td id="LC13" class="blob-code blob-code-inner js-file-line">  a. Go to the Firebase console.</td>
+                  </tr>
+                  <tr>
+                    <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
+                    <td id="LC14" class="blob-code blob-code-inner js-file-line">  b. In the center of the project overview page, click the Unity icon (plat_unity) to launch the setup workflow.</td>
+                  </tr>
+                  <tr>
+                    <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
+                    <td id="LC15" class="blob-code blob-code-inner js-file-line">  c. If you've already added an app to your Firebase project, click Add app to display the platform options.</td>
+                  </tr>
+                  <tr>
+                    <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
+                    <td id="LC16" class="blob-code blob-code-inner js-file-line">  d. Select which build target of your Unity project that you’d like to register, or you can even select to register both targets now at the same time.</td>
+                  </tr>
+                  
+                  <tr>
+                    <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
+                    <td id="LC18" class="blob-code blob-code-inner js-file-line code"> 
+                        <div style="margin-left:90px"><br>
+                            <br>For iOS — Enter your Unity project’s iOS ID in the iOS bundle ID field.<br>
+      For Android — Enter your Unity project’s Android ID in the Android package name field.<br>
+      The terms package name and application ID are often used interchangeably.<br>
+      Make sure that you enter the ID that your app is actually using.<br>
+      You cannot add or modify this value after you register your app with your Firebase project.<br><br>
+
+                        </div>
+                  </tr>
+                  
+                  <tr>
+                    <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
+                    <td id="LC24" class="blob-code blob-code-inner js-file-line">  e. Click Register app.</td>
+                  </tr>
+                  <tr>
+                    <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
+                    <td id="LC25" class="blob-code blob-code-inner js-file-line">
+            </td>
+                  </tr>
+                  <tr>
+                    <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
+                    <td id="LC26" class="blob-code blob-code-inner js-file-line"><br><br><b>Step</b> 3:</td>
+                  </tr>
+                  <tr>
+                    <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
+                    <td id="LC27" class="blob-code blob-code-inner js-file-line">Add Firebase configuration files-</td>
+                  </tr>
+                  <tr>
+                    <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
+                    <td id="LC28" class="blob-code blob-code-inner js-file-line">Obtain your platform-specific Firebase configuration file(s) in the Firebase console setup workflow.</td>
+                  </tr>
+                  <tr>
+                    <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
+                    <td id="LC29" class="blob-code blob-code-inner js-file-line code"><div style="margin-left:90px">
+                        <br>For iOS — Click Download GoogleService-Info.plist.<br>
+For Android — Click Download google-services.json.<br><br>
+                    </div></td>
+                  </tr>
+                  
+                  
+                  <tr>
+                    <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
+                    <td id="LC32" class="blob-code blob-code-inner js-file-line">  Now, Open the Project window of your Unity project, then move your config file(s) into the Assets folder.</td>
+                  </tr>
+                  <tr>
+                    <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
+                    <td id="LC33" class="blob-code blob-code-inner js-file-line">  Back in the Firebase console, in the setup workflow, click Next.</td>
+                  </tr>
+                  <tr>
+                    <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
+                    <td id="LC34" class="blob-code blob-code-inner js-file-line">
+            </td>
+                  </tr>
+                  <tr>
+                    <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
+                    <td id="LC35" class="blob-code blob-code-inner js-file-line"><br><br><b>Step</b> 4: Add Firebase Unity SDKs</td>
+                  </tr>
+                  <tr>
+                    <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
+                    <td id="LC36" class="blob-code blob-code-inner js-file-line">For Unity Versions 2018 and above, Firebase can be integrated directly from the Package Manager&gt;Windows without download the SDK.</td>
+                  </tr>
+
+                  <tr>
+                    <td id="L38" class="blob-num js-line-number" data-line-number="38"></td>
+                    <td id="LC38" class="blob-code blob-code-inner js-file-line">  Download the latest External Dependency Manager for Unity (EDM4U) from here: https://github.com/googlesamples/unity-jar-resolver/raw/master/external-dependency-manager-latest.unitypackage</td>
+                  </tr>
+                  <tr>
+                    <td id="L39" class="blob-num js-line-number" data-line-number="39"></td>
+                    <td id="LC39" class="blob-code blob-code-inner js-file-line">  Import the latest External Dependency Manager for Unity (EDM4U).</td>
+                  </tr>
+                  <tr>
+                    <td id="L40" class="blob-num js-line-number" data-line-number="40"></td>
+                    <td id="LC40" class="blob-code blob-code-inner js-file-line">  The Unity Package Manager Resolver will prompt you to add the Game Package Registry by Google to your project.</td>
+                  </tr>
+                  <tr>
+                    <td id="L41" class="blob-num js-line-number" data-line-number="41"></td>
+                    <td id="LC41" class="blob-code blob-code-inner js-file-line">  Select the registry and click the Add Selected Registries button.</td>
+                  </tr>
+                  <tr>
+                    <td id="L42" class="blob-num js-line-number" data-line-number="42"></td>
+                    <td id="LC42" class="blob-code blob-code-inner js-file-line">  EDM4U adds the registry to Packages/manifest.json under your current Unity project folder.</td>
+                  </tr>
+                  
+                  <tr>
+                    <td id="L44" class="blob-num js-line-number" data-line-number="44"></td>
+                    <td id="LC44" class="blob-code blob-code-inner js-file-line">Go to Package Manager&gt;Windows and add the Firebase products that you want to use in your app, in this case, the Firebase Cloud Messaging pacakge.</td>
+                  </tr>
+                  <tr>
+                    <td id="L45" class="blob-num js-line-number" data-line-number="45"></td>
+                    <td id="LC45" class="blob-code blob-code-inner js-file-line">For an optimal experience with Firebase Cloud Messaging, we recommend enabling Google Analytics in your project.</td>
+                  </tr>
+
+                  <tr>
+                    <td id="L47" class="blob-num js-line-number" data-line-number="47"></td>
+                    <td id="LC47" class="blob-code blob-code-inner js-file-line">Back in the Firebase console, in the setup workflow, click Next.</td>
+                  </tr>
+                  <tr>
+                    <td id="L48" class="blob-num js-line-number" data-line-number="48"></td>
+                    <td id="LC48" class="blob-code blob-code-inner js-file-line">Your Unity project is registered and configured to use Firebase.</td>
+                  </tr>
+                  <tr>
+                    <td id="L49" class="blob-num js-line-number" data-line-number="49"></td>
+                    <td id="LC49" class="blob-code blob-code-inner js-file-line">
+            </td>
+                  </tr>
+                  <tr>
+                    <td id="L50" class="blob-num js-line-number" data-line-number="50"></td>
+                    <td id="LC50" class="blob-code blob-code-inner js-file-line"><br><br><b>Step</b> 5: Initialize Firebase Cloud Messaging</td>
+                  </tr>
+                  <tr>
+                    <td id="L51" class="blob-num js-line-number" data-line-number="51"></td>
+                    <td id="LC51" class="blob-code blob-code-inner js-file-line">Make a new C# script in Unity</td>
+                  </tr>
+                  <tr>
+                    <td id="L52" class="blob-num js-line-number" data-line-number="52"></td>
+                    <td id="LC52" class="blob-code blob-code-inner js-file-line">The Firebase Cloud Message library will be initialized when adding handlers for either the TokenReceived or MessageReceived events.</td>
+                  </tr>
+                  <tr>
+                    <td id="L53" class="blob-num js-line-number" data-line-number="53"></td>
+                    <td id="LC53" class="blob-code blob-code-inner js-file-line">Upon initialization, a registration token is requested for the client app instance.</td>
+                  </tr>
+                  <tr>
+                    <td id="L54" class="blob-num js-line-number" data-line-number="54"></td>
+                    <td id="LC54" class="blob-code blob-code-inner js-file-line">The app will receive the token with the OnTokenReceived event, which should be cached for later use.</td>
+                  </tr>
+                  <tr>
+                    <td id="L55" class="blob-num js-line-number" data-line-number="55"></td>
+                    <td id="LC55" class="blob-code blob-code-inner js-file-line">You'll need this token if you want to target this specific device for messages.</td>
+                  </tr>
+                  
+                  <tr>
+                    <td id="L57" class="blob-num js-line-number" data-line-number="57"></td>
+                    <td id="LC57" class="blob-code blob-code-inner js-file-line">In addition, you will need to register for the OnMessageReceived event if you want to be able to receive incoming messages.</td>
+                  </tr>
+                  
+                  <tr>
+                    <td id="L59" class="blob-num js-line-number" data-line-number="59"></td>
+                    <td id="LC59" class="blob-code blob-code-inner js-file-line">The entire code looks like this:</td>
+                  </tr>
+                  <tr>
+                    <td id="L60" class="blob-num js-line-number" data-line-number="60"></td>
+                    <td id="LC60" class="blob-code blob-code-inner js-file-line">
+            </td>
+                  </tr>
+                  <tr >
+                    <td id="L61" class="blob-num js-line-number" data-line-number="61"></td>
+                    <td id="LC61" class="blob-code blob-code-inner js-file-line code">
+                        <div style="margin-left:90px">
+                            public void Start() {<br>
+                                Firebase.Messaging.FirebaseMessaging.TokenReceived += OnTokenReceived;<br>
+                                Firebase.Messaging.FirebaseMessaging.MessageReceived += OnMessageReceived;<br>
+                              }<br>
+                              <br>
+                              public void OnTokenReceived(object sender, Firebase.Messaging.<br>TokenReceivedEventArgs token) {<br>
+                                UnityEngine.Debug.Log("Received Registration Token: " + token.Token);<br>
+                              }<br>
+                              <br>
+                              public void OnMessageReceived(object sender, Firebase.Messaging.<br>MessageReceivedEventArgs e) {
+                                <br>UnityEngine.Debug.Log("Received a new message from: " + e.Message.From);
+                                <br>}
+                        </div>
+                    </td>
+                  
+                  </tr>
+                  <tr>
+                    <td id="L73" class="blob-num js-line-number" data-line-number="73"></td>
+                    <td id="LC73" class="blob-code blob-code-inner js-file-line">
+            </td>
+                  </tr>
+                  <tr>
+                    <td id="L74" class="blob-num js-line-number" data-line-number="74"></td>
+                    <td id="LC74" class="blob-code blob-code-inner js-file-line"><br><br><b>Step</b> 6:</td>
+                  </tr>
+                  <tr>
+                    <td id="L75" class="blob-num js-line-number" data-line-number="75"></td>
+                    <td id="LC75" class="blob-code blob-code-inner js-file-line">Go to Firebase console and scroll down to the GROW list on the left side, under Project overview.</td>
+                  </tr>
+                  <tr>
+                    <td id="L76" class="blob-num js-line-number" data-line-number="76"></td>
+                    <td id="LC76" class="blob-code blob-code-inner js-file-line">CLick on Cloud Messaging.</td>
+                  </tr>
+                  <tr>
+                    <td id="L77" class="blob-num js-line-number" data-line-number="77"></td>
+                    <td id="LC77" class="blob-code blob-code-inner js-file-line">Select Create a New Cloud Meassage.</td>
+                  </tr>
+                  <tr>
+                    <td id="L78" class="blob-num js-line-number" data-line-number="78"></td>
+                    <td id="LC78" class="blob-code blob-code-inner js-file-line">Enter the Notification Title and Description and Schedule the notification to the desired time.</td>
+                  </tr>
+                  <tr>
+                    <td id="L79" class="blob-num js-line-number" data-line-number="79"></td>
+                    <td id="LC79" class="blob-code blob-code-inner js-file-line">Select the bundle indentifier using which you register the app in the Target Option</td>
+                  </tr>
+                  <tr>
+                    <td id="L80" class="blob-num js-line-number" data-line-number="80"></td>
+                    <td id="LC80" class="blob-code blob-code-inner js-file-line">CLick on Review and Publish.</td>
+                  </tr>
+                  <tr>
+                    <td id="L81" class="blob-num js-line-number" data-line-number="81"></td>
+                    <td id="LC81" class="blob-code blob-code-inner js-file-line">
+            </td>
+                  </tr>
+                  <tr>
+                    <td id="L82" class="blob-num js-line-number" data-line-number="82"></td>
+                    <td id="LC82" class="blob-code blob-code-inner js-file-line">Your notification will be send to all the devices that have the client app installed!</td>
+                  </tr>
+            </tbody></table>
+            
+              <details class="details-reset details-overlay BlobToolbar position-absolute js-file-line-actions dropdown d-none" aria-hidden="true">
+                <summary class="btn-octicon ml-0 px-2 p-0 color-bg-primary border color-border-tertiary rounded-1" aria-label="Inline file action toolbar" aria-haspopup="menu" role="button">
+                  <svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" height="16" width="16" class="octicon octicon-kebab-horizontal">
+                <path d="M8 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM1.5 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm13 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            </svg>
+                </summary>
+                <details-menu role="menu">
+                  <ul class="BlobToolbar-dropdown dropdown-menu dropdown-menu-se mt-2" style="width:185px">
+                    <li>
+                      <clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-lines" style="cursor:pointer;" tabindex="0">
+                        Copy lines
+                      </clipboard-copy>
+                    </li>
+                    <li>
+                      <clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-permalink" style="cursor:pointer;" tabindex="0">
+                        Copy permalink
+                      </clipboard-copy>
+                    </li>
+                    <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="https://github.com/Praddy2009/ar_hub/blame/9f0bc9851ff0056926ac8e788534db4f76f37398/Push_Notifications_Firebase_Unity">View git blame</a></li>
+                      <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/Praddy2009/ar_hub/issues/new">Reference in new issue</a></li>
+                  </ul>
+                </details-menu>
+              </details>
+            
+              </div></p>
+              <hr>
+            
+            
+            <p class="text-center lead"><b>Thanks for Visiting. Have a nice day.</b> </p>
+        <br>
+        
+           
+    </div>
+    <!--End of body-->
+    <div class=" row5 overlay " id="cpy">
+        <div id="copyright" style="background-color: #22004C; padding:10px"> 
+           
+          <p class="center" style="font-size:0.9rem">Copyright &copy; 2021 - All Rights Reserved - <a href="#">XoRphilic</a></p>
+          
+        </div>
+      </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

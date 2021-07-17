@@ -1,11 +1,13 @@
 body{
     margin: 0;
-    padding: 0;
+    
     background-color: black;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+.container{
+    padding: 5%;
+}
 .center{
     text-align: center;
 }
@@ -23,6 +25,9 @@ body{
         padding-bottom:56.25%;
         position:relative;
         height:0;
+        width:80%;
+        margin: auto;
+        
     }
     .video-responsive iframe{
         left:0;
@@ -51,4 +56,19 @@ body{
 .bi{
     font-size: 190%;
     margin-right: 5px;
+}
+
+table {
+    border-spacing:0 0px;
+            
+}
+
+.code{
+    font-family: monospace;
+    font-size: 1rem;
+}
+a{
+    color:#9742ff;
+    text-decoration: wavy;
+    
 }
