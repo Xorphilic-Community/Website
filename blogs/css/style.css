@@ -72,3 +72,8 @@ a{
     text-decoration: wavy;
     
 }
+div img{
+    width: 80% !important;
+    margin: auto !important;
+    text-align: center;
+}
