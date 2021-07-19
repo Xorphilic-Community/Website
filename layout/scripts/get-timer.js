@@ -18,7 +18,7 @@ if(minutes<10)
 if(seconds<10)
     seconds="0"+seconds;
 if (timeleft < 0) {
-text.innerHTML="Workshop has started"
+text.innerHTML="Workshop not started"
 }
 else{
     text.innerHTML=days+":"+hours+":"+minutes+":"+seconds
